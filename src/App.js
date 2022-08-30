@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header';
+import Bodyclass from './components/Bodyclass';
+import { useState } from 'react';
+import BodyFunction from './components/BodyFunction';
 function App() {
+
+  const [state,setState] = useState("light");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header state={state} setState={setState}/>
+      <BodyFunction state={state}/>
+      {/* <Message /> */}
+      {/* <Greet /> */}
+      {/* <Count /> */}
+      {/* <Greet name="Mughees" age="23" /> */}
+      {/* <Greet name="Saad" age="21" /> */}
+      {/* <Greet name="rehan" age="13" /> */}
+      {/* <Welcome name="Mughees" age="23" /> */}
+      {/* <Welcome name="Saad" age="21" /> */}
+      {/* <Welcome name="rehan" age="13" /> */}
     </div>
   );
 }
