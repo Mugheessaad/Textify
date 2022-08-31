@@ -13,7 +13,7 @@ const BodyFunction = (props) => {
     const update = (e) => {
         setText(e.target.value);
         setCount(count + 1);
-        if (e.nativeEvent.data == " ") {
+        if (e.nativeEvent.data === " ") {
             setWords(words + 1);
         }
     }
@@ -36,10 +36,10 @@ const BodyFunction = (props) => {
     }
     return (
         <div>
-            <div className={props.state == "light" ? 'body':'body1'} >
+            <div className={props.state === "light" ? 'body':'body1'} >
                 <div className="conatinall">
                     <div className='container'>
-                        <textarea ref={textAreaRef} className={props.state == "dark" ? 'darktext': null}
+                        <textarea ref={textAreaRef} className={props.state === "dark" ? 'darktext': null}
                          value={text} cols="10" rows="19" onChange={update}></textarea>
                         <div className="buttons" >
                             <button className='btn' onClick={upperCase}>Convert UpperCase</button>
@@ -48,9 +48,9 @@ const BodyFunction = (props) => {
                             <button className='btn' onClick={copyData}>Copy Text</button>
                             <button className='btn' onClick={removeSpaces}>Remove Spaces</button>
                         </div>
-                        <div className={props.state == "dark" ? 'summary': null}><h1>Your text summary</h1></div>
-                        <div className={props.state == "dark" ? 'summary': null}><b>{words} words and {count} characters </b></div>
-                        <div className={props.state == "dark" ? 'preview': null}>
+                        <div className={props.state === "dark" ? 'summary': null}><h1>Your text summary</h1></div>
+                        <div className={props.state === "dark" ? 'summary': null}><b>{words} words and {count} characters </b></div>
+                        <div className={props.state === "dark" ? 'preview': null}>
                         <div><h3>Preview</h3></div>
                         <div>{text}</div>
                         </div>

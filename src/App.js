@@ -10,6 +10,8 @@ function App() {
     <div className="App">
       <Header state={state} setState={setState}/>
       <BodyFunction state={state}/>
+      {/* <Bodyclass state={state}/> */}
+
       {/* <Message /> */}
       {/* <Greet /> */}
       {/* <Count /> */}

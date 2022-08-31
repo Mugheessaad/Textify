@@ -5,7 +5,7 @@ const Header = ({state,setState}) => {
 
     let dark = true;
 const changeTheme = () =>{
-        if(dark == true && state =="light"){
+        if(dark === true && state ==="light"){
             let a =document.getElementById("header");
             a.style.backgroundColor = "rgb(21, 20, 20)";
             setState("dark");
