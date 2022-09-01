@@ -7,12 +7,13 @@ h3 {
   margin: 0px;
 }
 
-h1 {
+/* h1 {
   margin: 0px;
-}
+} */
 
 .logo {
   display: flex;
+  align-items: baseline;
 }
 
 .logo div {
@@ -29,10 +30,39 @@ h1 {
   color: white;
   padding-right: 6px;
 }
+.accordion{
+  width: 75%;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    padding-top: 50px;
+    height: 100vh;
+    background-color: antiquewhite;
 
+}
+.about1{
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: column;
+  padding-top: 50px;
+  height: 100vh;
+  background-color: #042743;
+
+}
+.answer{
+  background-color: #7996e7;
+}
 .header i {
   font-size: 25px;
   margin: 10px;
+  color: white;
+}
+.header a {
+  text-decoration: none;
   color: white;
 }
 
@@ -106,7 +136,6 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 .body {
   background-color: antiquewhite;
   display: flex;
@@ -114,23 +143,25 @@ input:checked+.slider:before {
   align-content: center;
   padding-top: 50px;
   flex-direction: column;
-  height: 80vh;
-
+  height: 100vh;
 }
-.darktext{
+
+.darktext {
   background-color: #808080;
   color: white;
 }
-.body1{
+
+.body1 {
   background-color: #042743;
   display: flex;
   justify-content: center;
   align-content: center;
   padding-top: 50px;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
 }
-.summary{
+
+.summary {
   color: white;
 }
 
@@ -145,21 +176,20 @@ input:checked+.slider:before {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 75%;
 }
 
 .buttons {
   display: flex;
+  margin-top: 4px;
 }
 
 .btn {
   background-color: #0B5ED7;
   color: white;
-  width: 20%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-top: 5px;
   border-style: none;
-  height: 5vh;
+  border: 1px solid transparent;
   border-radius: 5%
 }
 
@@ -179,9 +209,11 @@ input:checked+.slider:before {
   display: flex;
   justify-content: center;
 }
-.preview{
+
+.preview {
   color: white;
 }
+
 .header1 {
   display: flex;
   justify-content: space-between;

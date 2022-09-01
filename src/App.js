@@ -3,24 +3,28 @@ import Header from './components/Header';
 import Bodyclass from './components/Bodyclass';
 import { useState } from 'react';
 import BodyFunction from './components/BodyFunction';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom"; 
 function App() {
 
   const [state,setState] = useState("light");
   return (
     <div className="App">
+      <Router>
       <Header state={state} setState={setState}/>
-      <BodyFunction state={state}/>
+      <Routes>
+      <Route path="/" element= { <BodyFunction state={state}/>} />
+      <Route path="/about" element={ <About state={state}/>}/>
+        </Routes>
+      {/* <About/> */}
       {/* <Bodyclass state={state}/> */}
-
-      {/* <Message /> */}
-      {/* <Greet /> */}
-      {/* <Count /> */}
-      {/* <Greet name="Mughees" age="23" /> */}
-      {/* <Greet name="Saad" age="21" /> */}
-      {/* <Greet name="rehan" age="13" /> */}
-      {/* <Welcome name="Mughees" age="23" /> */}
-      {/* <Welcome name="Saad" age="21" /> */}
-      {/* <Welcome name="rehan" age="13" /> */}
+      </Router>
     </div>
   );
 }

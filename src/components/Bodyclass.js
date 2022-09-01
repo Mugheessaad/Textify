@@ -60,11 +60,11 @@ export default class Bodyclass extends Component {
         const { text, count, word } = this.state;
         return (
             <div>
-                <div className={this.props.state === "light" ? 'body':'body1'}>
+                <div className={this.props.state === "light" ? 'body' : 'body1'}>
                     <div className="conatinall">
                         <div className='container'>
-                            <textarea ref={this.inputref} className={this.props.state === "dark" ? 'darktext': null}
-                            value={text} cols="10" rows="19" onChange={this.update}></textarea>
+                            <textarea ref={this.inputref} className={this.props.state === "dark" ? 'darktext' : null}
+                                value={text} cols="10" rows="19" onChange={this.update}></textarea>
                             <div className="buttons" >
                                 <button className='btn' onClick={this.upperCase}>Convert UpperCase</button>
                                 <button className='btn' onClick={this.lowerCase}>Convert LowerCase</button>

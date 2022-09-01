@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 
 const BodyFunction = (props) => {
-    const [text, setText] = useState('Please typee here.....');
+    const [text, setText] = useState('Please type here.....');
     const [count, setCount] = useState(0);
     const [words, setWords] = useState(0);
     const textAreaRef = useRef(null);
@@ -35,12 +35,12 @@ const BodyFunction = (props) => {
         setText(taxt1);
     }
     return (
-        <div>
-            <div className={props.state === "light" ? 'body':'body1'} >
+        <div  className={props.state === "light" ? 'body' : 'body1'}>
+            <div  >
                 <div className="conatinall">
                     <div className='container'>
-                        <textarea ref={textAreaRef} className={props.state === "dark" ? 'darktext': null}
-                         value={text} cols="10" rows="19" onChange={update}></textarea>
+                        <textarea ref={textAreaRef} className={props.state === "dark" ? 'darktext' : null}
+                            value={text} cols="10" rows="10" onChange={update}></textarea>
                         <div className="buttons" >
                             <button className='btn' onClick={upperCase}>Convert UpperCase</button>
                             <button className='btn' onClick={lowerCase}>Convert LowerCase</button>
@@ -48,11 +48,11 @@ const BodyFunction = (props) => {
                             <button className='btn' onClick={copyData}>Copy Text</button>
                             <button className='btn' onClick={removeSpaces}>Remove Spaces</button>
                         </div>
-                        <div className={props.state === "dark" ? 'summary': null}><h1>Your text summary</h1></div>
-                        <div className={props.state === "dark" ? 'summary': null}><b>{words} words and {count} characters </b></div>
-                        <div className={props.state === "dark" ? 'preview': null}>
-                        <div><h3>Preview</h3></div>
-                        <div>{text}</div>
+                        <div className={props.state === "dark" ? 'summary' : null}><h1>Your text summary</h1></div>
+                        <div className={props.state === "dark" ? 'summary' : null}><b>{words} words and {count} characters </b></div>
+                        <div className={props.state === "dark" ? 'preview' : null}>
+                            <div><h3>Preview</h3></div>
+                            <div>{text}</div>
                         </div>
                     </div>
                 </div>
